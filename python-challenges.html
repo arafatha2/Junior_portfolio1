@@ -7,8 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .challenge-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
         .challenge-number {
             width: 40px;
@@ -16,6 +16,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        iframe {
+            min-height: 300px;
+            background: white;
         }
     </style>
 </head>
@@ -28,80 +34,53 @@
             <div class="w-24 h-1 bg-blue-500 mx-auto mt-4"></div>
         </header>
 
-        <!-- Challenges Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Challenge 1 -->
-            <div class="challenge-card bg-white rounded-lg shadow-md p-6 transition-all duration-300">
-                <div class="flex items-center mb-4">
-                    <div class="challenge-number bg-blue-500 text-white font-bold rounded-full mr-4">1</div>
-                    <h3 class="text-xl font-semibold text-gray-800">Challenge 1</h3>
-                </div>
-                <div class="mb-4">
-                    <!-- You can add a brief description here if needed -->
-                    <!-- Your CodeSkulptor link will go in the button below -->
-                    <a href="https://py3.codeskulptor.org/#user310_NhAvhyUdar5JglX.py" class="inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
-                        View Code
-                        <!-- REPLACE THE # ABOVE WITH YOUR CODESKULPTOR LINK -->
-                    </a>
+    <!-- Challenges Container -->
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 px-4 py-6">
+        <!-- Challenge 1 -->
+        <div class="challenge-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+            <div class="px-6 py-4 bg-gradient-to-r from-blue-500 to-blue-700">
+                <div class="flex items-center">
+                    <div class="challenge-number bg-white text-blue-600 rounded-full font-bold mr-3">#1</div>
+                    <h3 class="text-xl font-semibold text-white">Challenge 1</h3>
                 </div>
             </div>
-
-            <!-- Challenge 2 -->
-            <div class="challenge-card bg-white rounded-lg shadow-md p-6 transition-all duration-300">
-                <div class="flex items-center mb-4">
-                    <div class="challenge-number bg-blue-500 text-white font-bold rounded-full mr-4">2</div>
-                    <h3 class="text-xl font-semibold text-gray-800">Challenge 2</h3>
-                </div>
-                <div class="mb-4">
-                    <a href="https://py3.codeskulptor.org/#user310_oAslnv9B0yGvYT9.py" class="inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
-                        View Code
-                        <!-- REPLACE THE # ABOVE WITH YOUR CODESKULPTOR LINK -->
-                    </a>
-                </div>
+            <div class="p-1 bg-gray-100">
+                <iframe class="w-full h-64 border-0 rounded-b-lg" src="https://py3.codeskulptor.org/#user310_NhAvhyUdar5JglX.py" allowfullscreen></iframe>
             </div>
-
-            <!-- Challenge 3 through 33 -->
-            <!-- I've included placeholders for all 33 challenges, but to keep this code readable -->
-            <!-- I'm showing only the first 2 as examples. The rest would follow the same pattern -->
-            
-            <!-- Challenge 3 -->
-            <div class="challenge-card bg-white rounded-lg shadow-md p-6 transition-all duration-300">
-                <div class="flex items-center mb-4">
-                    <div class="challenge-number bg-blue-500 text-white font-bold rounded-full mr-4">3</div>
-                    <h3 class="text-xl font-semibold text-gray-800">Challenge 3</h3>
-                </div>
-                <div class="mb-4">
-                    <a href="https://py3.codeskulptor.org/#user310_q98P2SsckuevhXP.py" class="inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
-                        View Code
-                        <!-- REPLACE THE # ABOVE WITH YOUR CODESKULPTOR LINK -->
-                    </a>
-                </div>
-            </div>
-
-            <!-- Continue this pattern for challenges 4 through 33 -->
-            <!-- Each challenge would have the same structure, just updating the number -->
-            <!-- You would copy and paste the above card, updating the number and link for each challenge -->
-            
-            <!-- Example blank card template you can use to add the remaining challenges:
-            <div class="challenge-card bg-white rounded-lg shadow-md p-6 transition-all duration-300">
-                <div class="flex items-center mb-4">
-                    <div class="challenge-number bg-blue-500 text-white font-bold rounded-full mr-4">X</div>
-                    <h3 class="text-xl font-semibold text-gray-800">Challenge X</h3>
-                </div>
-                <div class="mb-4">
-                    <a href="#" class="inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
-                        View Code
-                        REPLACE THE # ABOVE WITH YOUR CODESKULPTOR LINK
-                    </a>
-                </div>
-            </div>
-            -->
         </div>
-    </div>
 
-    <script>
-        // You can add JavaScript functionality here if needed
-        // For example, sorting/filtering challenges, animations, etc.
-    </script>
+        <!-- Challenge 2 -->
+        <div class="challenge-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+            <div class="px-6 py-4 bg-gradient-to-r from-blue-500 to-blue-700">
+                <div class="flex items-center">
+                    <div class="challenge-number bg-white text-blue-600 rounded-full font-bold mr-3">#2</div>
+                    <h3 class="text-xl font-semibold text-white">Challenge 2</h3>
+                </div>
+            </div>
+            <div class="p-1 bg-gray-100">
+                <iframe class="w-full h-64 border-0 rounded-b-lg" src="https://py3.codeskulptor.org/#user310_oAslnv9B0yGvYT9.py" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Challenge 2 -->
+        <div class="challenge-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+            <div class="px-6 py-4 bg-gradient-to-r from-blue-500 to-blue-700">
+                <div class="flex items-center">
+                    <div class="challenge-number bg-white text-blue-600 rounded-full font-bold mr-3">#2</div>
+                    <h3 class="text-xl font-semibold text-white">Challenge 3</h3>
+                </div>
+            </div>
+            <div class="p-1 bg-gray-100">
+                <iframe class="w-full h-64 border-0 rounded-b-lg" src="https://py3.codeskulptor.org/#user310_q98P2SsckuevhXP.py" allowfullscreen></iframe>
+            </div>
+        </div>
+    <!-- Challenge 3 through 33 would follow the same pattern -->
+    <!-- For example: -->
+    <!--
+    <div class="challenge">
+        <h3>Challenge 3</h3>
+        <iframe src="YOUR_CODESKULPTOR_URL_HERE"></iframe>
+    </div>
+    -->
 </body>
 </html>
